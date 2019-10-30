@@ -1,0 +1,42 @@
+  <h1>Games</h1>
+  <div class="game-container" >
+    <% @teams.each do |team| %>
+      <div class="team-logos">
+        <img class="logo" src="<%= team.home_team_logo %>" alt="">
+        <img class="logo" src="<%= team.away_team_logo %>" alt="">
+      </div>
+      <div class="team-title">
+        <%= team.title %>
+        <p class="row-title"><%= team.game_time.strftime("%b %d, %Y %H:%M") %></p>
+      </div>
+      <div class="team-reach">
+        <%= team.reach %>
+        <p class="row-title">Reach</p>
+      </div>
+      <div class="team-league">
+        <%= team.league %>
+        <p class="row-title">League</p>
+      </div>
+      <div class="team-channel">
+        <%= team.channel %>
+        <p class="row-title">Channel</p>
+      </div>
+      <div class="team-price">
+        <p data-target="hello.cost" class="accent-color">$<%= team.price_per_minute %>/min</p>
+      </div>
+        <form class="minute-selector" data-controller="hello">
+            <input data-target="hello.sub" data-action="click->hello#subtractMinute" name="subtract" type='button' value='-' class='qtyplus uk-button sub' name='quantity' />
+            <input data-target="hello.quantity" type='text' name='quantity' value='<%= team.minutes_booked %>' class='qty' disabled align="center" data-cost="<%= team.price_per_minute %>" />
+            <input  data-target="hello.add" data-action="click->hello#addMinute" type='button' value='+' class='qtyplus uk-button add' field='quantity' />
+        </form>
+    <% end %>
+  </div>
+  <hr>
+  <div class="checkout-container">
+    <div class="row" data-controller="hello">
+        <span id="update" data-minutes=0 data-cost="0" >Add minutes to your campaign</span>
+      <button data-target="hello.proceedButton" class="uk-button accent-color">Proceed To Checkout</button>
+    </div>
+  </div>
+</div>
+

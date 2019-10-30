@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  game_time: 2019-10-29 12:04:37
+  home_team_logo: MyString
+  away_team_logo: MyString
+  reach: 1
+  league: MyString
+  channel: MyString
+  price_per_minute: 1
+  minutes_booked: 1
+
+two:
+  title: MyString
+  game_time: 2019-10-29 12:04:37
+  home_team_logo: MyString
+  away_team_logo: MyString
+  reach: 1
+  league: MyString
+  channel: MyString
+  price_per_minute: 1
+  minutes_booked: 1

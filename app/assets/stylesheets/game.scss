@@ -1,0 +1,90 @@
+$font-bold: Arial-BoldMT, Arial bold;
+$font-reg: ArialMT, Arial;
+$accent-color: #30C287;
+$primary-color: #555555;
+
+body {
+  font-family: $font-bold;
+  p.row-title {
+    font-family: $font-reg
+  }
+  p.accent-color{
+    color: $accent-color;
+  }
+  button.accent-color {
+    color: white;
+    background-color: $accent-color;
+  }
+}
+.game-container {
+  display: grid;
+  width: 100vw;
+  grid-template-columns: 10% 20% 10% 10% 10% 20% 12%;
+  column-gap: 5px;
+  row-gap: 20px;
+  align-items: center;
+  form {
+    width: 51px;
+    height: 45px;
+    width: 152px;
+    box-shadow: none;
+
+    input {
+      text-align: center;
+      font-family: 'Arial-BoldMT', 'Arial Bold', 'Arial';
+      font-weight: 700;
+      font-style: normal;
+      font-size: 16px;
+      background-color: #e5e5e5;
+      width: 40px;
+    }
+      .qty {
+        background-color: rgba(85, 85, 85, 1);
+        width: 60px;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+        }
+      .sub {
+        border-radius: 5px 0px 0px 5px;
+      }
+      .add {
+        border-radius: 0px 5px 5px 0px;
+      }
+  }
+
+}
+.checkout-container {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 1480px;
+  height: 78px;
+  background-color: #e5e5e5;
+  .row {
+    align-content: center;
+    padding-right: 40px;
+  }
+}
+.team-title {
+  grid-column: 2 / span 1;
+}
+.team-reach {
+  grid-column: 3 / span 1
+}
+.row-title {
+  font-weight: 400;
+  color: #999999;
+  font-size: 12px;
+}
+.team-logos {
+  display: flex;
+  grid-column: 1 / span 1;
+  .logo {
+    width: 40px;
+  }
+}
+.minute-selector {
+  display: flex;
+}

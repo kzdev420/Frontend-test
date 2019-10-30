@@ -1,0 +1,17 @@
+{
+  "name": "game",
+  "private": true,
+  "engines": {
+    "node": "10.15.1"
+  },
+  "dependencies": {
+    "@rails/webpacker": "^4.0.7",
+    "stimulus": "^1.1.1",
+    "uikit": "^3.2.2"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
